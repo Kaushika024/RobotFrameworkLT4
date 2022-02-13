@@ -1,10 +1,10 @@
 *** Settings ***
-Library    OperatingSystem
 Library    Collections
 *** Variables ***
 ${MY_NAME}      Kaushika
 @{COLORS}   red     green      yellow
 &{EMPLOYEE1}    empid=102       empname=Kaushi      age=22
+&{PERSONAL_DETAIL}      frstname=Kaushi           lastname= S             mobile=9882134509
 
 *** Test Cases ***
 TC1
@@ -40,3 +40,9 @@ TC4
    Log To Console    The employee age is ${EMPLOYEE1}[age]
    Log Dictionary     ${EMPLOYEE1}
    Log List     ${COLORS}
+   
+   
+TC5
+   Log To Console    ${PERSONAL_DETAIL}
+   Log To Console    ${PERSONAL_DETAIL}[frstname]
+   Log To Console    The
